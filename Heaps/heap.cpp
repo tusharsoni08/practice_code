@@ -138,11 +138,7 @@ int main()
     stack.pop();
     cout << stack.top() << endl;
     stack.pop();
-    cout << stack.top() << endl;
     stack.pop();
-    cout << stack.top() << endl;
-    stack.pop();
-    cout << stack.top() << endl;
     //stack.printStack();
 
     //output

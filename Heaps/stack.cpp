@@ -28,22 +28,6 @@ void Stack::Exchange(pair<int, int> &a, pair<int, int> &b){
     b = temp;
 }
 
-void Stack::Heap_increase_key(vector<pair<int, int> > &A, int i, int key){
-    if(A[i].first > key) return;
-    A[i].first = key;
-    while((i > 0) &&(A[PARENT(i)].first < A[i].first)){
-        Exchange(A[PARENT(i)], A[i]);
-        i = PARENT(i);
-    }
-}
-
-void Stack::Max_heap_insert(vector<pair<int, int> > &A, int key){
-    heap_size += 1;
-    //A[heap_size] = INT_MIN;
-    A.push_back(make_pair(priority, key));
-    Heap_increase_key(A, heap_size-1, key);
-}
-
 void Stack::Build_max_heap(vector<pair<int, int> > &A){
     heap_size = A.size();
     for(int i=floor((heap_size-1)/2); i >= 0; i--)

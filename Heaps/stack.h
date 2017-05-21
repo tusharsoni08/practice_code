@@ -27,8 +27,6 @@ private:
     int priority;
     int heap_size = 0;
 
-    void Max_heap_insert(vector<pair<int, int> > &A, int key);
-    void Heap_increase_key(vector<pair<int, int> > &A, int i, int key);
     void Exchange(pair<int, int> &a, pair<int, int> &b);
     void Max_heapify(vector<pair<int, int> > &A, int i);
     void Build_max_heap(vector<pair<int, int> > &A);
